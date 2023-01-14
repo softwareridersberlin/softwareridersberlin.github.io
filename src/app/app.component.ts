@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'software-riders-berlin';
+  active = 1;
+
 }
