@@ -2,11 +2,17 @@
 
 /* Importing Bootstrap SCSS file. */
 // @import '~bootstrap/scss/bootstrap';
+
 $nav-link-color: white;
 $nav-tabs-link-active-border-color: transparent;
 $nav-tabs-border-color: transparent;
 $nav-tabs-link-hover-border-color: transparent;
 $nav-tabs-link-active-color: #A7E66E;
 $nav-tabs-link-active-bg: transparent;
+
 @import "node_modules/bootstrap/scss/bootstrap";
 
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

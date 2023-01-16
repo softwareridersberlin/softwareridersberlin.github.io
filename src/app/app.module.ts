@@ -7,6 +7,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { OurProfessionalismsPageComponent } from './pages/our-professionalisms-page/our-professionalisms-page.component';
 import { WhatSourcesDoWeBaseOnPageComponent } from './pages/what-sources-do-we-base-on-page/what-sources-do-we-base-on-page.component';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+
 
 @NgModule({
   declarations: [
@@ -18,7 +21,9 @@ import { WhatSourcesDoWeBaseOnPageComponent } from './pages/what-sources-do-we-b
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    MatButtonModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
