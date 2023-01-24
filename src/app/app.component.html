@@ -31,6 +31,13 @@
                         What sources do we base on?
                     </a>
                 </li>
+                <li [ngbNavItem]="4">
+                    <a ngbNavLink [routerLink]="['/references']"
+                        [ngStyle]="{'color': active == 3 ? '#A7E66E' : 'black'}"
+                        (click)="offcanvas.dismiss('Cross click')">
+                        References
+                    </a>
+                </li>
             </div>
         </ul>
     </div>
