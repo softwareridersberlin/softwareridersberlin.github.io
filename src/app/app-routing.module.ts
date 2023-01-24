@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { OurProfessionalismsPageComponent } from './pages/our-professionalisms-page/our-professionalisms-page.component';
+import { ReferencesComponent } from './pages/references/references.component';
 import { WhatSourcesDoWeBaseOnPageComponent } from './pages/what-sources-do-we-base-on-page/what-sources-do-we-base-on-page.component';
 
 const routes: Routes = [
@@ -21,6 +22,10 @@ const routes: Routes = [
   {
     path: "what-sources-do-we-base-on",
     component: WhatSourcesDoWeBaseOnPageComponent,
+  },
+  {
+    path: "references",
+    component: ReferencesComponent
   }
 ];
 

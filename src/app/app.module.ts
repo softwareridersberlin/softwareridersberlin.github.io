@@ -18,6 +18,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { HttpRequestInterceptor } from './core/loading-interceptor.service';
+import { ReferencesComponent } from './pages/references/references.component';
 
 if (environment.production) {
   enableProdMode();
@@ -30,6 +31,7 @@ if (environment.production) {
     HomePageComponent,
     OurProfessionalismsPageComponent,
     WhatSourcesDoWeBaseOnPageComponent,
+    ReferencesComponent,
   ],
   imports: [
     BrowserModule,

@@ -9,9 +9,9 @@
         </div>
     </div>
 
-    <div class="row p-5">
-        <div class="col p-5">
-            <div class="container-fluid d-flex flex-column justify-content-center align-items-center">
+    <div class="row">
+        <div class="col-12 col-md-6">
+            <div class="container-fluid d-flex flex-column justify-content-center align-items-center" >
                 <h1 class="display-3">Drop Us A Line</h1>
                 <p class="fw-light">Whether you have a question about features, trials, pricing, need a demo or anything
                     else, our team is ready to answer</p>
@@ -19,7 +19,7 @@
                     <mat-label>Write Us</mat-label>
                     <textarea matInput [(ngModel)]="content"></textarea>
                 </mat-form-field>
-                <div class="container-fluid d-flex flex-row justify-content-between" style="padding: 0px;">
+                <div class="container-fluid d-flex flex-row justify-content-between flex-wrap" style="padding: 0px;">
                     <mat-form-field appearance="outline">
                         <mat-label>Your Name</mat-label>
                         <input matInput [(ngModel)]="name">
@@ -34,28 +34,28 @@
                 <button type="button" class="btn btn-success" style="width: 100%;" (click)="sendMail()">Send</button>
             </div>
         </div>
-        <div class="col p-5">
+        <div class="col-12 col-md-6 p-5">
             <img src="/assets/World.svg" class="img-fluid" alt="image">
         </div>
     </div>
 </div>
 <div class="row mt-5">
     <div class="col">
-        <div class="container-fluid d-flex flex-row justify-content-center">
-            <mat-icon fontIcon="location_city" class="contact-icons"></mat-icon>
+        <div class="container-fluid d-flex flex-row justify-content-center flex-wrap">
+            <mat-icon fontIcon="location_city"></mat-icon>
             <figure class="ms-3">
                 <blockquote class="blockquote">
                     <p>Address</p>
                 </blockquote>
                 <figcaption class="blockquote-footer">
-                    Someone famous in <cite title="Source Title">Source Title</cite>
+                    Berlin
                 </figcaption>
             </figure>
         </div>
     </div>
-    <div class="col">
-        <div class="container-fluid d-flex flex-row justify-content-center">
-            <mat-icon fontIcon="call" class="contact-icons"></mat-icon>
+    <!-- <div class="col">
+        <div class="container-fluid d-flex flex-row justify-content-center flex-wrap">
+            <mat-icon fontIcon="call"></mat-icon>
             <figure class="ms-3">
                 <blockquote class="blockquote">
                     <p>Phone</p>
@@ -65,16 +65,16 @@
                 </figcaption>
             </figure>
         </div>
-    </div>
+    </div> -->
     <div class="col">
-        <div class="container-fluid d-flex flex-row justify-content-center">
-            <mat-icon fontIcon="send" class="contact-icons"></mat-icon>
+        <div class="container-fluid d-flex flex-row justify-content-center flex-wrap">
+            <mat-icon fontIcon="send"></mat-icon>
             <figure class="ms-3">
                 <blockquote class="blockquote">
                     <p>Email</p>
                 </blockquote>
                 <figcaption class="blockquote-footer">
-                    Someone famous in <cite title="Source Title">Source Title</cite>
+                    contact@softwareridersberlin.de
                 </figcaption>
             </figure>
         </div>
@@ -83,13 +83,13 @@
 <div class="row mt-2 me-5">
     <div class="col">
         <div class="container-fluid d-flex flex-row justify-content-end align-items-center">
-            <button mat-icon-button class="contact-icons-links-button me-4"
+            <button mat-icon-button class="me-1"
                 onClick="window.open('https://www.linkedin.com/in/bugrasessevmez/')">
-                <mat-icon class="contact-icons-links" fontSet="fa-brands" fontIcon="fa-linkedin"></mat-icon>
+                <mat-icon  fontSet="fa-brands" fontIcon="fa-linkedin"></mat-icon>
             </button>
-            <button mat-icon-button class="contact-icons-links-button me-5"
+            <button mat-icon-button class="me-5"
                 onClick="window.open('https://www.linkedin.com/in/bugrasessevmez/')">
-                <mat-icon class="contact-icons-links" fontSet="fa-brands" fontIcon="fa-github"></mat-icon>
+                <mat-icon  fontSet="fa-brands" fontIcon="fa-github"></mat-icon>
             </button>
         </div>
     </div>
