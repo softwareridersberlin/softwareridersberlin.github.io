@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { enableProdMode, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -12,7 +12,16 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { environment } from '../environments/environment';
+import { MAIL_URL } from './core/mail-url.token';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { HttpRequestInterceptor } from './core/loading-interceptor.service';
 
+if (environment.production) {
+  enableProdMode();
+}
 
 
 @NgModule({
@@ -20,7 +29,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppComponent,
     HomePageComponent,
     OurProfessionalismsPageComponent,
-    WhatSourcesDoWeBaseOnPageComponent
+    WhatSourcesDoWeBaseOnPageComponent,
   ],
   imports: [
     BrowserModule,
@@ -30,9 +39,19 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatIconModule,
     MatFormFieldModule,
     MatInputModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule,
+    HttpClientModule,
+    MatProgressSpinnerModule
   ],
-  providers: [],
+  providers: [
+    { provide: MAIL_URL, useValue: environment.mail_url },
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: HttpRequestInterceptor,
+      multi: true,
+      },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

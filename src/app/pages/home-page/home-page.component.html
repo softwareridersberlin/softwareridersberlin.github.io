@@ -17,21 +17,21 @@
                     else, our team is ready to answer</p>
                 <mat-form-field appearance="outline" style="width: 100%;">
                     <mat-label>Write Us</mat-label>
-                    <textarea matInput></textarea>
+                    <textarea matInput [(ngModel)]="content"></textarea>
                 </mat-form-field>
                 <div class="container-fluid d-flex flex-row justify-content-between" style="padding: 0px;">
                     <mat-form-field appearance="outline">
                         <mat-label>Your Name</mat-label>
-                        <input matInput>
+                        <input matInput [(ngModel)]="name">
                         <mat-icon matSuffix>person</mat-icon>
                     </mat-form-field>
                     <mat-form-field appearance="outline">
                         <mat-label>Your Email</mat-label>
-                        <input matInput>
+                        <input matInput [(ngModel)]="email">
                         <mat-icon matSuffix>mail</mat-icon>
                     </mat-form-field>
                 </div>
-                <button type="button" class="btn btn-success" style="width: 100%;" (click)="sendMail()">Success</button>
+                <button type="button" class="btn btn-success" style="width: 100%;" (click)="sendMail()">Send</button>
             </div>
         </div>
         <div class="col p-5">
@@ -94,3 +94,11 @@
         </div>
     </div>
 </div>
+
+<ng-template #thanksModal let-modal>
+	
+	<div class="modal-body">
+        <h2 class="modal-title display-3">Perfect!</h2>
+		<p>We will return you as soon as possible.</p>
+	</div>
+</ng-template>

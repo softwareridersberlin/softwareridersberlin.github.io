@@ -1,35 +1,45 @@
+<div *ngIf="loading" class="loading-container d-flex justify-content-center align-items-center">
+    <mat-progress-spinner color="primary" mode="indeterminate">
+    </mat-progress-spinner>
+</div>
+
 <ng-template #content let-offcanvas>
-	<div class="offcanvas-header">
-		<h4 class="offcanvas-title">Software Riders Berlin</h4>
-		<button type="button" class="btn-close" aria-label="Close" (click)="offcanvas.dismiss('Cross click')"></button>
-	</div>
-	<div class="offcanvas-body">
-		<ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs">
+    <div class="offcanvas-header">
+        <h4 class="offcanvas-title">Software Riders Berlin</h4>
+        <button type="button" class="btn-close" aria-label="Close" (click)="offcanvas.dismiss('Cross click')"></button>
+    </div>
+    <div class="offcanvas-body">
+        <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs">
             <div class="container-fluid d-flex flex-column justify-content-center">
                 <li [ngbNavItem]="1">
-                    <a ngbNavLink [routerLink]="['/home']" [ngStyle]="{'color': active == 1 ? '#A7E66E' : 'black'}" (click)="offcanvas.dismiss('Cross click')">
+                    <a ngbNavLink [routerLink]="['/home']" [ngStyle]="{'color': active == 1 ? '#A7E66E' : 'black'}"
+                        (click)="offcanvas.dismiss('Cross click')">
                         Home
                     </a>
                 </li>
                 <li [ngbNavItem]="2">
-                    <a ngbNavLink [routerLink]="['/our-professionalisms']" [ngStyle]="{'color': active == 2 ? '#A7E66E' : 'black'}" (click)="offcanvas.dismiss('Cross click')">
+                    <a ngbNavLink [routerLink]="['/our-professionalisms']"
+                        [ngStyle]="{'color': active == 2 ? '#A7E66E' : 'black'}"
+                        (click)="offcanvas.dismiss('Cross click')">
                         Our professionalisms
                     </a>
                 </li>
                 <li [ngbNavItem]="3">
-                    <a ngbNavLink [routerLink]="['/what-sources-do-we-base-on']" [ngStyle]="{'color': active == 3 ? '#A7E66E' : 'black'}" (click)="offcanvas.dismiss('Cross click')">
+                    <a ngbNavLink [routerLink]="['/what-sources-do-we-base-on']"
+                        [ngStyle]="{'color': active == 3 ? '#A7E66E' : 'black'}"
+                        (click)="offcanvas.dismiss('Cross click')">
                         What sources do we base on?
                     </a>
                 </li>
             </div>
         </ul>
-	</div>
+    </div>
 </ng-template>
 
 <div class="container-fluid position-absolute">
     <div class="container-fluid d-flex flex-row justify-content-end d-block d-md-none">
         <button mat-icon-button (click)="openEnd(content)">
-            <mat-icon fontIcon="menu" ></mat-icon>
+            <mat-icon fontIcon="menu"></mat-icon>
         </button>
     </div>
     <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs d-none d-md-block">
