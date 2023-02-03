@@ -33,9 +33,16 @@
                 </li>
                 <li [ngbNavItem]="4">
                     <a ngbNavLink [routerLink]="['/references']"
-                        [ngStyle]="{'color': active == 3 ? '#A7E66E' : 'black'}"
+                        [ngStyle]="{'color': active == 4 ? '#A7E66E' : 'black'}"
                         (click)="offcanvas.dismiss('Cross click')">
                         References
+                    </a>
+                </li>
+                <li [ngbNavItem]="5">
+                    <a ngbNavLink [routerLink]="['/our-team']"
+                        [ngStyle]="{'color': active == 5 ? '#A7E66E' : 'black'}"
+                        (click)="offcanvas.dismiss('Cross click')">
+                        Our Team
                     </a>
                 </li>
             </div>
@@ -71,11 +78,13 @@
                     References
                 </a>
             </li>
+            <li [ngbNavItem]="5">
+                <a ngbNavLink [routerLink]="['/our-team']">
+                    Our Team
+                </a>
+            </li>
         </div>
     </ul>
 </div>
-
-<img src="/assets/Header.svg" class="img-fluid" alt="image">
-
 
 <router-outlet></router-outlet>

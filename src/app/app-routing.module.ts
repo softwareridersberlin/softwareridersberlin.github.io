@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { OurProfessionalismsPageComponent } from './pages/our-professionalisms-page/our-professionalisms-page.component';
+import { OurTeamComponent } from './pages/our-team/our-team.component';
 import { ReferencesComponent } from './pages/references/references.component';
 import { WhatSourcesDoWeBaseOnPageComponent } from './pages/what-sources-do-we-base-on-page/what-sources-do-we-base-on-page.component';
 
@@ -26,6 +27,10 @@ const routes: Routes = [
   {
     path: "references",
     component: ReferencesComponent
+  },
+  {
+    path: "our-team",
+    component: OurTeamComponent
   }
 ];
 

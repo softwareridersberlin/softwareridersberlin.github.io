@@ -19,6 +19,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { HttpRequestInterceptor } from './core/loading-interceptor.service';
 import { ReferencesComponent } from './pages/references/references.component';
+import { OurTeamComponent } from './pages/our-team/our-team.component';
 
 if (environment.production) {
   enableProdMode();
@@ -32,6 +33,7 @@ if (environment.production) {
     OurProfessionalismsPageComponent,
     WhatSourcesDoWeBaseOnPageComponent,
     ReferencesComponent,
+    OurTeamComponent,
   ],
   imports: [
     BrowserModule,
